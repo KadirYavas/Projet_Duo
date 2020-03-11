@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Projet Duo jhgvjhkgvbsjdk
+                    Projet Duo j'y suis mkdir
                 </div>
 
                 <div class="links">
