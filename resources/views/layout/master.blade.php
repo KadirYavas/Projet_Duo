@@ -33,7 +33,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="{{ route('adminUser') }}">Utilisateurs</a>
-                        <a class="dropdown-item" href="{{ route('ajoutAvatar') }}">Avatars</a>
+                        <a class="dropdown-item" href="{{ route('adminAvatar') }}">Avatars</a>
                         <a class="dropdown-item" href="#">Catégories</a>
                         <a class="dropdown-item" href="{{ route('listeImage') }}">Images</a>
                     </div>

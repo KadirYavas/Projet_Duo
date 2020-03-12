@@ -74,8 +74,8 @@
                     Administration
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Utilisateurs</a>
-                    <a class="dropdown-item" href="#">Avatars</a>
+                    <a class="dropdown-item" href="{{ route('adminUser') }}">Utilisateurs</a>
+                    <a class="dropdown-item" href="{{ route('adminAvatar') }}">Avatars</a>
                     <a class="dropdown-item" href="#">Catégories</a>
                     <a class="dropdown-item" href="{{ route('listeImage') }}">Images</a>
                 </div>
@@ -83,9 +83,10 @@
         </ul>
     </div>
 </nav>
+@section('breadcrumb')
+    <li class="breadcrumb-item active" aria-current="page">Home</li>
+@endsection
 <div class="flex-center position-ref full-height">
-
-
     <div class="content">
         <div class="title mt-5 m-b-md w-100">
             <img  src="{{ asset('image/1200px-Laravel.svg.png') }}" width="200">

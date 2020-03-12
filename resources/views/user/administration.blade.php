@@ -34,7 +34,7 @@
                 <td>{{ $item->age }}</td>
                 @foreach($avatar as $img)
                     @if($img->id === $item->id)
-                        <td><img src="{{asset('storage/'.$img->image)}}" width="50" height="50" alt=""></td>
+                        <td><img src="{{asset('storage/'.$img->image)}}" height="50" alt=""></td>
                     @endif
                 @endforeach
                 <td>
