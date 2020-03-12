@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAvatarsTable extends Migration
+class CreateEntreprisesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,16 @@ class CreateAvatarsTable extends Migration
      */
     public function up()
     {
-        Schema::create('avatars', function (Blueprint $table) {
+        Schema::create('entreprises', function (Blueprint $table) {
             $table->id();
-            $table->char('image');
-
-            $table->bigInteger('users_id');
+            $table->string('nom');
+            $table->string('nb_employe');
+            $table->bigInteger('roles_id');
 
             $table->timestamps();
 
-            $table->foreign('users_id')
-                ->references('id')->on('users')
+            $table->foreign('roles_id')
+                ->references('id')->on('roles')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
         });
@@ -35,6 +35,6 @@ class CreateAvatarsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('avatars');
+        Schema::dropIfExists('entreprises');
     }
 }
