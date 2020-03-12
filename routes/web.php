@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('homepage');
 
+Route::get('administrationAvatar', 'AvatarController@index')->name('adminAvatar');
 Route::get('ajoutAvatar', 'AvatarController@create')->name('ajoutAvatar');
 Route::post('envoiAvatar', 'AvatarController@store')->name('envoiAvatar');
 

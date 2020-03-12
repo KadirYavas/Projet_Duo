@@ -93,7 +93,7 @@
         <img class="mb-5" src="{{ asset('image/laravel-wordmark-1.svg') }}" width="600">
 
         <div class="links mt-4">
-            <a href="{{ route('ajoutAvatar') }}">AVATAR</a>
+            <a href="{{ route('adminAvatar') }}">AVATAR</a>
             <a href="{{route('ajoutUser')}}">USER</a>
         </div>
     </div>

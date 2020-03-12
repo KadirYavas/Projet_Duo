@@ -9,15 +9,15 @@ Ajouter un user
 <form class="m-3" action="{{route('envoiUser')}}" method="post" enctype="multipart/form-data">
     @csrf
     <div>
-        <input class="form-control m-3 @error('nom') is-invalid @enderror" type="text" name="nom" id="" placeholder="Veuillez saisir votre nom">
+        <input class="form-control @error('nom') is-invalid @enderror" type="text" name="nom" id="" placeholder="Veuillez saisir votre nom">
         @error('nom')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input class="form-control m-3 @error('age') is-invalid @enderror" type="text" name="age" id="" placeholder="Veuillez saisir votre âge">
+        <input class="form-control @error('age') is-invalid @enderror" type="text" name="age" id="" placeholder="Veuillez saisir votre âge">
         @error('age')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input class="form-control m-3 @error('email') is-invalid @enderror" type="text" name="email" id="" placeholder="Veuillez saisir votre email">
+        <input class="form-control @error('email') is-invalid @enderror" type="text" name="email" id="" placeholder="Veuillez saisir votre email">
         @error('email')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror

@@ -15,7 +15,8 @@ class AvatarController extends Controller
      */
     public function index()
     {
-        //
+        $avatar = Avatar::all();
+        return view('avatar/administration', compact('avatar'));
     }
 
     /**
@@ -47,7 +48,7 @@ class AvatarController extends Controller
         $avatar->image = $storage;
         $avatar->save();
 
-        return redirect()->back();
+        return redirect()->route('adminAvatar');
     }
 
     /**
@@ -67,9 +68,10 @@ class AvatarController extends Controller
      * @param  \App\Avatar  $avatar
      * @return \Illuminate\Http\Response
      */
-    public function edit(Avatar $avatar)
+    public function edit($id)
     {
-        //
+        $avatar = Avatar::find($id);
+        return view('avatar/editAvatar', compact('avatar'));
     }
 
     /**
