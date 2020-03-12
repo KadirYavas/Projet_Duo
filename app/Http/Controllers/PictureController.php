@@ -43,13 +43,14 @@ class PictureController extends Controller
      */
     public function store(PictureRequest $request)
     {
-        $pictures = new Picture();
 
         $storage = Storage::disk('public')->put('', $request->file('file'));
+        $pictures = new Picture();
 
         $pictures->image = $storage;
 
         $pictures->save();
+        dd($pictures);
         return redirect()->route('listeImage');
     }
 

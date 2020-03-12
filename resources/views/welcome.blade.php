@@ -62,7 +62,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
         <img src="{{ asset('image/laravelLogo.png') }}" width="30" height="30" class="d-inline-block align-top" alt="">
-        Librairie Exo
+        Projet Duo
     </a>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
@@ -74,10 +74,10 @@
                     Administration
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="{{route('adminUser')}}">Utilisateurs</a>
-                    <a class="dropdown-item" href="{{route('adminAvatar')}}">Avatars</a>
-                    <a class="dropdown-item" href="#">Auteurs</a>
-                    <a class="dropdown-item" href="#">Genres</a>
+                    <a class="dropdown-item" href="#">Utilisateurs</a>
+                    <a class="dropdown-item" href="#">Avatars</a>
+                    <a class="dropdown-item" href="#">Catégories</a>
+                    <a class="dropdown-item" href="{{ route('listeImage') }}">Images</a>
                 </div>
             </li>
         </ul>
