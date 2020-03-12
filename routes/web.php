@@ -26,8 +26,11 @@ Route::get('destroyAvatar/{id}', 'AvatarController@destroy')->name('destroyAvata
 Route::get('downloadAvatar/{id}', 'AvatarController@download')->name('download');
 
 Route::get('administrationUser', 'UserController@index')->name('adminUser');
+
 Route::get('ajoutUser', 'UserController@create')->name('ajoutUser');
 Route::post('envoiUser', 'UserController@store')->name('envoiUser');
-Route::get('editUser/{id}', 'UserController@edit')->name('editUser');
-Route::post('updateUser/{id}', 'UserController@update')->name('updateUser');
-Route::get('destroyUser/{id}', 'UserController@destroy')->name('destroyUser');
+
+//IMAGES
+Route::get('/home/images' , 'PictureController@index')->name('listeImage');
+Route::get('/home/images/create' , 'PictureController@create')->name('createImage');
+Route::post('/home/images/create/store' , 'PictureController@store')->name('storeImage');
