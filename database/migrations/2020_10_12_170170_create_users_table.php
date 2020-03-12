@@ -18,12 +18,6 @@ class CreateUsersTable extends Migration
             $table->char('nom');
             $table->integer('age');
             $table->char('email');
-            $table->bigInteger('id_avatars')->unsigned();
-            $table->foreign('id_avatars')
-                ->on('avatars')
-                ->references('id')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
             $table->timestamps();
         });
     }

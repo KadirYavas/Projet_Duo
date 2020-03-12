@@ -19,7 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c7d10fb-c5c8-44ca-9bc5-e74139d0f0da" name="Default Changelist" comment="" />
+    <list default="true" id="2c7d10fb-c5c8-44ca-9bc5-e74139d0f0da" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/thomas.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_11_144116_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_11_144116_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_11_144141_create_avatars_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_11_144141_create_avatars_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_12_085504_create_entreprises_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_12_085504_create_entreprises_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_12_085524_create_roles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_12_085524_create_roles_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_12_170170_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_170170_create_users_table.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,6 +155,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public/image" />
     <property name="node.js.path.for.package.tslint" value="project" />

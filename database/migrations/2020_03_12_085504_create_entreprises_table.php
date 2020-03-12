@@ -15,7 +15,16 @@ class CreateEntreprisesTable extends Migration
     {
         Schema::create('entreprises', function (Blueprint $table) {
             $table->id();
+            $table->string('nom');
+            $table->string('nb_employe');
+            $table->bigInteger('roles_id');
+
             $table->timestamps();
+
+            $table->foreign('roles_id')
+                ->references('id')->on('roles')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
         });
     }
 

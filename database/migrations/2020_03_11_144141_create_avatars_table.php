@@ -16,7 +16,15 @@ class CreateAvatarsTable extends Migration
         Schema::create('avatars', function (Blueprint $table) {
             $table->id();
             $table->char('image');
+
+            $table->bigInteger('users_id');
+
             $table->timestamps();
+
+            $table->foreign('users_id')
+                ->references('id')->on('users')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
         });
     }
 
