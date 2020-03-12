@@ -15,4 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+})->name('homepage');
+
+Route::get('/master', function () {
+    return view('layout/master');
 });
+
+Route::get('ajoutAvatar', 'AvatarController@create')->name('ajoutAvatar');

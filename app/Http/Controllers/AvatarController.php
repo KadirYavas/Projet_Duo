@@ -24,7 +24,7 @@ class AvatarController extends Controller
      */
     public function create()
     {
-        //
+        return view('avatar/ajoutAvatar');
     }
 
     /**
@@ -35,7 +35,11 @@ class AvatarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $avatar = new Avatar();
+        $avatar->image = $request->input('avatar');
+        $avatar->save();
+
+        return redirect()->back();
     }
 
     /**
