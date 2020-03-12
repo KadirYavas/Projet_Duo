@@ -1,0 +1,133 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"d51983fc-5adc-4862-bcd4-e23e6a735017\" name=\"Default Changelist\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/resources/views/layout/master.blade.php\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ComposerSettings\" synchronizationState=\"SYNCHRONIZE\">\n    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>\n    <execution />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectId\" id=\"1YzL22b3zYKyh8JutLaIIehkUPI\" />\n  <component name=\"ProjectLevelVcsManager\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"ASKED_ADD_EXTERNAL_FILES\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\n  </component>\n  <component name=\"SvnConfiguration\">\n    <configuration />\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"d51983fc-5adc-4862-bcd4-e23e6a735017\" name=\"Default Changelist\" comment=\"\" />\n      <created>1583940266248</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1583940266248</updated>\n      <workItem from=\"1583940268897\" duration=\"926000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"2\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\n  </component>\n  <component name=\"WindowStateProjectService\">\n    <state width=\"1638\" height=\"281\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1583940312036\">\n      <screen x=\"0\" y=\"0\" width=\"1680\" height=\"1050\" />\n    </state>\n    <state width=\"1638\" height=\"281\" key=\"GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050\" timestamp=\"1583940312036\" />\n    <state width=\"1638\" height=\"281\" key=\"GridCell.Tab.0.center\" timestamp=\"1583940312035\">\n      <screen x=\"0\" y=\"0\" width=\"1680\" height=\"1050\" />\n    </state>\n    <state width=\"1638\" height=\"281\" key=\"GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050\" timestamp=\"1583940312035\" />\n    <state width=\"1638\" height=\"281\" key=\"GridCell.Tab.0.left\" timestamp=\"1583940312034\">\n      <screen x=\"0\" y=\"0\" width=\"1680\" height=\"1050\" />\n    </state>\n    <state width=\"1638\" height=\"281\" key=\"GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050\" timestamp=\"1583940312034\" />\n    <state width=\"1638\" height=\"281\" key=\"GridCell.Tab.0.right\" timestamp=\"1583940312035\">\n      <screen x=\"0\" y=\"0\" width=\"1680\" height=\"1050\" />\n    </state>\n    <state width=\"1638\" height=\"281\" key=\"GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050\" timestamp=\"1583940312035\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision a786921e2c943c8c0eae4f82b443f80553fa0c0d)
++++ .idea/workspace.xml	(date 1583942530380)
+@@ -1,9 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="d51983fc-5adc-4862-bcd4-e23e6a735017" name="Default Changelist" comment="">
+-      <change afterPath="$PROJECT_DIR$/resources/views/layout/master.blade.php" afterDir="false" />
+-    </list>
++    <list default="true" id="2c7d10fb-c5c8-44ca-9bc5-e74139d0f0da" name="Default Changelist" comment="" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -21,6 +19,105 @@
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="PhpWorkspaceProjectConfiguration">
++    <include_path>
++      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
++      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
++      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
++      <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
++      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
++      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
++      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
++      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
++      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
++      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
++      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
++      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
++      <path value="$PROJECT_DIR$/vendor/composer" />
++      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
++      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
++      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
++      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
++      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
++      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
++      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
++      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
++      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
++      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
++      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
++      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
++      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
++      <path value="$PROJECT_DIR$/vendor/psr/log" />
++      <path value="$PROJECT_DIR$/vendor/psr/container" />
++      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
++      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
++      <path value="$PROJECT_DIR$/vendor/opis/closure" />
++      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
++      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
++      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
++      <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
++      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
++      <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
++      <path value="$PROJECT_DIR$/vendor/facade/ignition" />
++      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
++      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
++      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
++      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
++      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
++      <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
++      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
++      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
++      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
++      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
++      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
++      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
++      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
++      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
++      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
++      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
++      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
++      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
++      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
++      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
++      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
++      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
++      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
++      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
++      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
++      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
++      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
++      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
++      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
++      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
++      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
++      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
++      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
++      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
++      <path value="$PROJECT_DIR$/vendor/symfony/process" />
++      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
++      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
++      <path value="$PROJECT_DIR$/vendor/symfony/console" />
++      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
++    </include_path>
++  </component>
+   <component name="ProjectId" id="1YzL22b3zYKyh8JutLaIIehkUPI" />
+   <component name="ProjectLevelVcsManager">
+     <ConfirmationsSetting value="2" id="Add" />
+@@ -72,4 +169,4 @@
+     </state>
+     <state width="1638" height="281" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1583940312035" />
+   </component>
+-</project>
+\ No newline at end of file
++</project>
