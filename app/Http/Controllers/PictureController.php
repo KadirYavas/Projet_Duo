@@ -41,7 +41,7 @@ class PictureController extends Controller
      * @param PictureRequest $request
      * @return RedirectResponse
      */
-    public function store(PictureRequest $request)
+    public function store(Request $request)
     {
         $pictures = new Picture();
 

@@ -26,7 +26,6 @@ Route::get('destroyAvatar/{id}', 'AvatarController@destroy')->name('destroyAvata
 Route::get('downloadAvatar/{id}', 'AvatarController@download')->name('download');
 
 Route::get('administrationUser', 'UserController@index')->name('adminUser');
-
 Route::get('ajoutUser', 'UserController@create')->name('ajoutUser');
 Route::post('envoiUser', 'UserController@store')->name('envoiUser');
 Route::get('editUser/{id}', 'UserController@edit')->name('editUser');
