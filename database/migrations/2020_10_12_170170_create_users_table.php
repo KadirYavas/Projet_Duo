@@ -18,6 +18,9 @@ class CreateUsersTable extends Migration
             $table->char('nom');
             $table->integer('age');
             $table->char('email');
+            $table->bigInteger('avatars_id');
+            $table->foreign('avatars_id')
+                ->references('id')->on('avatars');
             $table->timestamps();
         });
     }

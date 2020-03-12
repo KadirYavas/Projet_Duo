@@ -47,6 +47,7 @@ class UserController extends Controller
         $user->nom = $request->input('nom');
         $user->age = $request->input('age');
         $user->email = $request->input('email');
+        $user
         $user->save();
 
         return redirect()->back();
