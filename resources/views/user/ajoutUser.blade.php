@@ -26,7 +26,7 @@ Ajouter un user
             @foreach ($avatar as $item)
                 <div>
                     <div><img width="150px" src="{{asset('storage/'.$item->image)}}" alt=""></div>
-                    <input type="radio" name="choix" id="">
+                    <input type="radio" name="choix" id="" value="{{$item->id}}">
                 </div>
             @endforeach
         </div>

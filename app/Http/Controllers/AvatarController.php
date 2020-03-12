@@ -43,6 +43,7 @@ class AvatarController extends Controller
         $storage = Storage::disk('public')->put('', $request->file('avatar'));
 
         $avatar = new Avatar();
+        $avatar->nom = $request->input('nom');
         $avatar->image = $storage;
         $avatar->save();
 

@@ -37,17 +37,11 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nom' => 'required|min:4|max:40',
-            'age' => 'required|integer',
-            'email' => 'required|email:rfc,dns',
-        ]);
-
         $user = new User();
         $user->nom = $request->input('nom');
         $user->age = $request->input('age');
         $user->email = $request->input('email');
-        $user->avatar_id = $request->input('choix');
+        $user->avatars_id = $request->input('choix');
         $user->save();
 
         return redirect()->back();

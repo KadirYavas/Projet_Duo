@@ -23,12 +23,12 @@ class CreateUsersTable extends Migration
                 ->references('id')->on('avatars')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
-            $table->bigInteger('roles_id')->unsigned();
+            $table->bigInteger('roles_id')->unsigned()->nullable();
             $table->foreign('roles_id')
                 ->references('id')->on('roles')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
-            $table->bigInteger('entreprises_id')->unsigned();
+            $table->bigInteger('entreprises_id')->unsigned()->nullable();
             $table->foreign('entreprises_id')
                 ->references('id')->on('entreprises')
                 ->onUpdate('cascade')
