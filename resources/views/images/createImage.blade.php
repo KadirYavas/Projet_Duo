@@ -16,7 +16,7 @@
         @csrf
         <section class="text-left mb-2">
             <div class="text-left mb-3">
-                <label for="nom">Choissisez une Image</label>
+                <label for="file">Choissisez une Image</label>
                 <input class="form-control @error('file') is-invalid @enderror" type="file" name="file" id="file">
                 @error('file')
                 <small class="text-danger">{{ $message }}</small>

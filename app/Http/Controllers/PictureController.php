@@ -38,10 +38,10 @@ class PictureController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param PictureRequest $request
+     * @param Request $request
      * @return RedirectResponse
      */
-    public function store(PictureRequest $request)
+    public function store(Request $request)
     {
 
         $storage = Storage::disk('public')->put('', $request->file('file'));
@@ -50,7 +50,7 @@ class PictureController extends Controller
         $pictures->image = $storage;
 
         $pictures->save();
-        dd($pictures);
+//        dd($pictures);
         return redirect()->route('listeImage');
     }
 

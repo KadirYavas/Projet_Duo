@@ -29,7 +29,7 @@
         @foreach($pictures as $picture)
             <tr>
                 <td>{{ $picture->id }}</td>
-                <td>{{ $picture->image }}</td>
+                <td><img width="50" src='{{ asset('storage/'.$picture->image) }}'></td>
                 <td>
                     <a href="#"><button class="btn btn-outline-primary m-1">Voir</button></a>
                     <a href="#"><button class="btn btn-outline-info m-1">Modifier</button></a>

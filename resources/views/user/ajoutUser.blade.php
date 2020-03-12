@@ -6,6 +6,9 @@ Ajouter un user
 
 @section('style')
     <style>
+        /*.custom-control-label::before {*/
+        /*    background-color: darkorange;*/
+        /*}*/
         .label_avatar:hover {
             border-radius: 10px;
             background-color: lightgray;
@@ -17,6 +20,11 @@ Ajouter un user
         .label_avatar:active {
             border-radius: 10px;
             background-color: lightgray;
+        }
+        .custom-control-input:checked ~ .custom-control-label::before {
+            color: #1b1e21;
+            border-color: darkred;
+            background-color: darkred;
         }
     </style>
 @endsection
@@ -47,22 +55,24 @@ Ajouter un user
                 <small class="text-danger">{{ $message }}</small>
             @enderror
         </div>
-        <h4 class="">Choisissez un avatar:</h4>
+        <h4 class="mt-3">Choisissez un avatar:</h4>
         <div class="d-flex">
             @foreach ($avatar as $item)
                 <div>
                     <label class="label_avatar">
                         <div class="text-center">
                             <img class="mx-2 p-1" width="150" height="150" src="{{asset('storage/'.$item->image)}}" alt="">
-                            <h3>{{ $item->nom }}</h3>
                         </div>
-                        <input class="label_avatar d-none" type="radio" name="choix" id="" value="{{$item->id}}">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="choix" name="choix" class="custom-control-input" value="{{$item->id}}">
+                                <label class="custom-control-label" for="customRadioInline1">{{$item->nom}}</label>
+                        </div>
                     </label>
                 </div>
             @endforeach
         </div>
     </section>
-    <button class="btn btn-warning text-dark font-weight-bold m-5" type="submit">Ajoutez l'user</button>
+    <button class="btn btn-outline-danger text-dark font-weight-bold mt-5" type="submit">Ajoutez l'user</button>
 </form>
 
 @endsection
