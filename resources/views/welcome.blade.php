@@ -85,8 +85,8 @@
                 </div>
 
                 <div class="links">
+                    <a href="{{route('ajoutUser')}}">User</a>
                     <a href="{{route('ajoutAvatar')}}">Avatar</a>
-                    <a href="https://laracasts.com">Laracasts</a>
                 </div>
             </div>
         </div>

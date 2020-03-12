@@ -6,12 +6,15 @@ Ajouter des avatars
 
 @section('content')
 
-<form class="m-3" action="" method="post" enctype="multipart/form-data">
+<form class="m-3" action="{{route('envoiAvatar')}}" method="post" enctype="multipart/form-data">
     @csrf
     <div>
-        <input class="form-control" type="file" name="avatar" id="">
+        <input class="form-control @error('avatar') is-invalid @enderror" type="file" name="avatar" id="">
+        @error('avatar')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
     </div>
-    <button class="m-5" type="submit">Ajoutez l'avatar choisis</button>
+    <button class="btn btn-warning text-dark font-weight-bold m-5" type="submit">Ajoutez l'avatar</button>
 </form>
 
 @endsection

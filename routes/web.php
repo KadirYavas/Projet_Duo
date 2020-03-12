@@ -22,3 +22,7 @@ Route::get('/master', function () {
 });
 
 Route::get('ajoutAvatar', 'AvatarController@create')->name('ajoutAvatar');
+Route::post('envoiAvatar', 'AvatarController@store')->name('envoiAvatar');
+
+Route::get('ajoutUser', 'UserController@create')->name('ajoutUser');
+Route::post('envoiUser', 'UserController@store')->name('envoiUser');

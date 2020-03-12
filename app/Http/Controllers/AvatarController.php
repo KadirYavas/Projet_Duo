@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Avatar;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AvatarController extends Controller
 {
@@ -35,8 +36,14 @@ class AvatarController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'avatar' => 'required|file',
+        ]);
+
+        $storage = Storage::disk('public')->put('', $request->file('avatar'));
+
         $avatar = new Avatar();
-        $avatar->image = $request->input('avatar');
+        $avatar->image = $storage;
         $avatar->save();
 
         return redirect()->back();
