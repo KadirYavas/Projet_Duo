@@ -94,7 +94,7 @@
 
         <div class="links mt-4">
             <a href="{{ route('ajoutAvatar') }}">AVATAR</a>
-            <a href="#">HOMEPAGE</a>
+            <a href="{{route('ajoutUser')}}">USER</a>
         </div>
     </div>
 </div>

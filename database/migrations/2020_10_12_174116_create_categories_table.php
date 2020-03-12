@@ -17,7 +17,6 @@ class CreateCategoriesTable extends Migration
             $table->id();
             $table->string('nom', 45);
             $table->bigInteger('pictures_id');
-
             $table->foreign('pictures_id')
                 ->references('id')->on('pictures')
                 ->onUpdate('cascade')

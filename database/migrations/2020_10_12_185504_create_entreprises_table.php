@@ -17,14 +17,13 @@ class CreateEntreprisesTable extends Migration
             $table->id();
             $table->string('nom');
             $table->string('nb_employe');
-            $table->bigInteger('roles_id');
-
+            $table->bigInteger('users_id');
+            $table->foreign('users_id')
+            ->on('users')
+            ->references('id')
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
             $table->timestamps();
-
-            $table->foreign('roles_id')
-                ->references('id')->on('roles')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
         });
     }
 
