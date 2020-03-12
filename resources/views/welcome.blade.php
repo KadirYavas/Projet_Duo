@@ -78,6 +78,7 @@
                     <a class="dropdown-item" href="{{route('adminAvatar')}}">Avatars</a>
                     <a class="dropdown-item" href="#">Auteurs</a>
                     <a class="dropdown-item" href="#">Genres</a>
+                    <a class="dropdown-item" href="#">Test</a>
                 </div>
             </li>
         </ul>
