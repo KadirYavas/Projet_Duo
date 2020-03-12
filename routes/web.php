@@ -23,3 +23,8 @@ Route::post('envoiAvatar', 'AvatarController@store')->name('envoiAvatar');
 
 Route::get('ajoutUser', 'UserController@create')->name('ajoutUser');
 Route::post('envoiUser', 'UserController@store')->name('envoiUser');
+
+//IMAGES
+Route::get('/home/images' , 'PictureController@index')->name('listeImage');
+Route::get('/home/images/create' , 'PictureController@create')->name('createImage');
+Route::post('/home/images/create/store' , 'PictureController@store')->name('storeImage');

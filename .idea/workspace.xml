@@ -20,7 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c7d10fb-c5c8-44ca-9bc5-e74139d0f0da" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/PictureRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/images/createImage.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/images/listeImage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8253ffd-5687-473f-a31a-90604bc6badb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8253ffd-5687-473f-a31a-90604bc6badb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PictureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PictureController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,6 +201,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1584016867295" />
+    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1584021707329">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1584021707329" />
     <state width="1638" height="281" key="GridCell.Tab.0.bottom" timestamp="1583940312036">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -207,13 +221,13 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1638" height="281" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1583940312035" />
-    <state width="332" height="539" key="HiddenNamespacesPopup" timestamp="1584016886369">
+    <state width="332" height="539" key="HiddenNamespacesPopup" timestamp="1584019817852">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="332" height="539" key="HiddenNamespacesPopup/0.0.1680.1050@0.0.1680.1050" timestamp="1584016886369" />
-    <state x="505" y="187" width="670" height="676" key="search.everywhere.popup" timestamp="1584018470952">
+    <state width="332" height="539" key="HiddenNamespacesPopup/0.0.1680.1050@0.0.1680.1050" timestamp="1584019817852" />
+    <state x="505" y="187" width="670" height="676" key="search.everywhere.popup" timestamp="1584019750858">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="187" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1584018470952" />
+    <state x="505" y="187" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1584019750858" />
   </component>
 </project>

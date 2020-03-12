@@ -2,47 +2,62 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PictureRequest;
 use App\Picture;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\View\View;
 
 class PictureController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Application|Factory|View
      */
     public function index()
     {
-        //
+        $pictures = Picture::all();
+        return view('images.listeImage' , compact('pictures'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Application|Factory|View
      */
     public function create()
     {
-        //
+        return view('images.createImage');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param PictureRequest $request
+     * @return RedirectResponse
      */
-    public function store(Request $request)
+    public function store(PictureRequest $request)
     {
-        //
+        $pictures = new Picture();
+
+        $storage = Storage::disk('public')->put('', $request->file('file'));
+
+        $pictures->image = $storage;
+
+        $pictures->save();
+        return redirect()->route('listeImage');
     }
 
     /**
      * Display the specified resource.
      *
      * @param  \App\Picture  $picture
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show(Picture $picture)
     {
@@ -53,7 +68,7 @@ class PictureController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\Picture  $picture
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function edit(Picture $picture)
     {
@@ -63,9 +78,9 @@ class PictureController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @param  \App\Picture  $picture
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update(Request $request, Picture $picture)
     {
@@ -76,7 +91,7 @@ class PictureController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Picture  $picture
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy(Picture $picture)
     {

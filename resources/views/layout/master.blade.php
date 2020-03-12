@@ -35,7 +35,7 @@
                         <a class="dropdown-item" href="#">Utilisateurs</a>
                         <a class="dropdown-item" href="#">Avatars</a>
                         <a class="dropdown-item" href="#">Catégories</a>
-                        <a class="dropdown-item" href="#">Images</a>
+                        <a class="dropdown-item" href="{{ route('listeImage') }}">Images</a>
                     </div>
                 </li>
             </ul>
