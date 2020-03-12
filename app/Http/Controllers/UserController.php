@@ -15,7 +15,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $user = User::all();
+        $avatar = Avatar::all();
+        return view('user/administration', compact('user', 'avatar'));
     }
 
     /**
@@ -66,7 +68,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        $avatar = Avatar::all();
+        return view('user/editUser', compact('user', 'avatar'));
     }
 
     /**
@@ -78,7 +82,20 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // $request->validate([
+        //     'nom' => 'required|min:4',
+        //     'image' => 'required'
+        // ]);
+        
+        $user = User::find($id);
+        $user->nom = $request->input('nom');
+        $user->age = $request->input('age');
+        $user->email = $request->input('email');
+        $user->avatars_id = $request->input('choix');
+
+        $user->save();
+
+        return redirect()->route('adminUser');
     }
 
     /**
@@ -89,6 +106,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->route('adminUser');
     }
 }
