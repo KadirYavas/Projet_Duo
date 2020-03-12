@@ -17,6 +17,7 @@ class CreateEntreprisesTable extends Migration
             $table->id();
             $table->string('nom');
             $table->string('nb_employe');
+            $table->string('logo');
             $table->timestamps();
         });
     }

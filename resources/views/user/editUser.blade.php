@@ -1,5 +1,11 @@
 @extends('layout/master')
 
+@section('breadcrumb')
+    <li class="breadcrumb-item" aria-current="page"><a class="text-dark" href="{{ route('homepage') }}">Home</a></li>
+    <li class="breadcrumb-item" aria-current="page">User</li>
+    <li class="breadcrumb-item active" aria-current="page">Editer l'user</li>
+@endsection
+
 @section('h2')
 Editer un user
 @endsection

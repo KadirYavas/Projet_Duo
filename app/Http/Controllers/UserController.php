@@ -6,6 +6,7 @@ use App\Http\Requests\UserRequest;
 use Illuminate\Http\Request;
 use App\Avatar;
 use App\User;
+use App\Entreprise;
 
 class UserController extends Controller
 {
@@ -18,7 +19,8 @@ class UserController extends Controller
     {
         $user = User::all();
         $avatar = Avatar::all();
-        return view('user/administration', compact('user', 'avatar'));
+        $entreprise = Entreprise::all();
+        return view('user/administration', compact('user', 'avatar', 'entreprise'));
     }
 
     /**
@@ -29,7 +31,8 @@ class UserController extends Controller
     public function create()
     {
         $avatar = Avatar::all();
-        return view('user/ajoutUser', compact('avatar'));
+        $entreprise = Entreprise::all();
+        return view('user/ajoutUser', compact('avatar', 'entreprise'));
     }
 
     /**

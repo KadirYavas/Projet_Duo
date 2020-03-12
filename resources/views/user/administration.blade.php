@@ -1,42 +1,51 @@
 @extends('layout/master')
 
+@section('breadcrumb')
+    <li class="breadcrumb-item" aria-current="page"><a class="text-dark" href="{{ route('homepage') }}">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">User</li>
+@endsection
+
 @section('h2')
 <div class="d-flex flex-column">
     Administration des users
-    <a href="{{route('ajoutUser')}}"><button class="btn btn-success">Ajouter un user</button></a>
 </div>
 @endsection
 
 @section('content')
 
-<div class="row bg-warning">
-    <div class="col-1">ID</div>
-    <div class="col-2">Nom de l'user</div>
-    <div class="col-2">Age de l'user</div>
-    <div class="col-4">Avatar de l'user</div>
-</div>
+<a href="{{route('ajoutUser')}}"><button class="btn btn-outline-dark btn-lg mb-4">Ajouter un user</button></a>
 
-@foreach ($user as $item)
-<div class="row">
-    <div class="col-1">{{$item->id}}</div>
-    <div class="col-2">{{$item->nom}}</div>
-    <div class="col-2">{{$item->age}}</div>
-    @foreach ($avatar as $img)
-    <div class="col-4"><img src="{{asset('storage/'.$img->image)}}" width="100px"></div>
-    @endforeach
-    <div class="col-3">
-        <a href="{{route('editUser', $item->id)}}"><button class="btn btn-warning">
-            <i class="fas fa-pen fa-fw"></i>
-            Edit
-          </button>
-          </a>
-          <a href="{{route('destroyUser', $item->id)}}"><button class="btn btn-danger">
-            <i class="fas fa-pen fa-fw"></i>
-            Delete
-          </button>
-          </a>
-    </div>
-</div>
-@endforeach
+<table class="table table-bordered table-hover shadow">
+  <thead>
+  <tr>
+      <th>ID</th>
+      <th>Nom de l'user</th>
+      <th>Age de l'user</th>
+      <th>Avatar de l'user</th>
+      <th>Entreprise de l'user</th>
+      <th class="col-2">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  @foreach($user as $item)
+      <tr>
+          <td>{{ $item->id }}</td>
+          <td>{{ $item->nom }}</td>
+          <td>{{ $item->age }}</td>
+        @foreach ($avatar as $img)
+            <td><img src="{{asset('storage/'.$img->image)}}" width="100px"></td>
+        @endforeach
+        @foreach ($entreprise as $img)
+            <td><img src="{{asset('storage/'.$img->logo)}}" width="100px"></td>
+        @endforeach
+          <td><img src="{{asset('storage/'.$item->logo)}}" alt="" width="75px"></td>
+          <td>
+              <a href="{{route('editUser', $item->id)}}"><button class="btn btn-outline-info m-1">Modifier</button></a>
+              <a href="{{route('destroyUser', $item->id)}}"><button class="btn btn-outline-danger">Supprimer</button></a>
+          </td>
+      </tr>
+  @endforeach
+  </tbody>
+</table>
 
 @endsection

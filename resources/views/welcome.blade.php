@@ -76,7 +76,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="{{route('adminUser')}}">Utilisateurs</a>
                     <a class="dropdown-item" href="{{route('adminAvatar')}}">Avatars</a>
-                    <a class="dropdown-item" href="#">Auteurs</a>
+                    <a class="dropdown-item" href="{{route('adminEntreprise')}}">Entreprise</a>
                     <a class="dropdown-item" href="#">Genres</a>
                 </div>
             </li>

@@ -1,5 +1,11 @@
 @extends('layout/master')
 
+@section('breadcrumb')
+    <li class="breadcrumb-item" aria-current="page"><a class="text-dark" href="{{ route('homepage') }}">Home</a></li>
+    <li class="breadcrumb-item" aria-current="page">User</li>
+    <li class="breadcrumb-item active" aria-current="page">Ajout d'user</li>
+@endsection
+
 @section('h2')
 Ajouter un user
 @endsection
@@ -57,6 +63,20 @@ Ajouter un user
                             <h3>{{ $item->nom }}</h3>
                         </div>
                         <input class="label_avatar d-none" type="radio" name="choix" id="" value="{{$item->id}}">
+                    </label>
+                </div>
+            @endforeach
+        </div>
+        <h4>Choisissez une entreprise</h4>
+        <div class="d-flex">
+            @foreach ($entreprise as $entrep)
+                <div>
+                    <label class="label_avatar">
+                        <div class="text-center">
+                            <img class="mx-2 p-1" width="150" height="150" src="{{asset('storage/'.$entrep->logo)}}" alt="">
+                            <h3>{{ $entrep->nom }}</h3>
+                        </div>
+                        <input class="label_avatar d-none" type="radio" name="choix" id="" value="{{$entrep->id}}">
                     </label>
                 </div>
             @endforeach
