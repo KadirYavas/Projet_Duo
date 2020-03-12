@@ -18,15 +18,21 @@ class CreateUsersTable extends Migration
             $table->char('nom');
             $table->integer('age');
             $table->char('email');
-            $table->bigInteger('avatars_id');
+            $table->bigInteger('avatars_id')->unsigned();
             $table->foreign('avatars_id')
-                ->references('id')->on('avatars');
-            $table->bigInteger('roles_id');
+                ->references('id')->on('avatars')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+            $table->bigInteger('roles_id')->unsigned();
             $table->foreign('roles_id')
-                ->references('id')->on('roles');
-            $table->bigInteger('entreprises_id');
+                ->references('id')->on('roles')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+            $table->bigInteger('entreprises_id')->unsigned();
             $table->foreign('entreprises_id')
-                ->references('id')->on('entreprises');
+                ->references('id')->on('entreprises')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }
