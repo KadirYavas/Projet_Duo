@@ -22,6 +22,7 @@
             <th>ID</th>
             <th>Nom</th>
             <th>Age</th>
+            <th>Adresse Email</th>
             <th>Avatar</th>
             <th class="col-3">Actions</th>
         </tr>
@@ -31,7 +32,8 @@
             <tr>
                 <td>{{ $item->id }}</td>
                 <td>{{ $item->nom }}</td>
-                <td>{{ $item->age }}</td>
+                <td>{{ $item->age }} ans</td>
+                <td>{{ $item->email }}</td>
                 @foreach($avatar as $img)
                     @if($img->id === $item->id)
                         <td><img src="{{asset('storage/'.$img->image)}}" height="50" alt=""></td>

@@ -48,6 +48,7 @@ class PictureController extends Controller
         $pictures = new Picture();
 
         $pictures->image = $storage;
+        $pictures->
 
         $pictures->save();
 //        dd($pictures);
