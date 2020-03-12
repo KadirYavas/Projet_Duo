@@ -74,8 +74,8 @@
                     Administration
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Utilisateurs</a>
-                    <a class="dropdown-item" href="#">Livres</a>
+                    <a class="dropdown-item" href="{{route('adminUser')}}">Utilisateurs</a>
+                    <a class="dropdown-item" href="{{route('adminAvatar')}}">Avatars</a>
                     <a class="dropdown-item" href="#">Auteurs</a>
                     <a class="dropdown-item" href="#">Genres</a>
                 </div>
@@ -90,12 +90,9 @@
         <div class="title mt-5 m-b-md w-100">
             <img  src="{{ asset('image/1200px-Laravel.svg.png') }}" width="200">
         </div>
-        <img class="mb-5" src="{{ asset('image/laravel-wordmark-1.svg') }}" width="600">
 
-        <div class="links mt-4">
-            <a href="{{ route('adminAvatar') }}">AVATAR</a>
-            <a href="{{route('ajoutUser')}}">USER</a>
-        </div>
+        <img class="mb-5" src="{{ asset('image/laravel-wordmark-1.svg') }}" width="300">
+
     </div>
 </div>
 {{--    scripts--}}

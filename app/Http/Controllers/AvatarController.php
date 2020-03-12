@@ -81,9 +81,22 @@ class AvatarController extends Controller
      * @param  \App\Avatar  $avatar
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Avatar $avatar)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'nom' => 'required|min:4',
+            // 'image' => 'required'
+        ]);
+
+        // $storage = Storage::disk('public')->put('', $request->file('avatar'));
+        
+        $avatar = Avatar::find($id);
+        $avatar->nom = $request->input('nom');
+        // $avatar->image = $storage;
+
+        $avatar->save();
+
+        return redirect()->route('adminAvatar');
     }
 
     /**
@@ -92,8 +105,16 @@ class AvatarController extends Controller
      * @param  \App\Avatar  $avatar
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Avatar $avatar)
+    public function destroy($id)
     {
-        //
+        $avatar = Avatar::find($id);
+        Storage::disk('public')->delete($avatar->image);
+        $avatar->delete();
+        return redirect()->route('adminAvatar');
+    }
+    public function download($id)
+    {
+        $avatar = Avatar::find($id);
+        return Storage::disk('public')->download($avatar->image, $avatar->nom);
     }
 }
