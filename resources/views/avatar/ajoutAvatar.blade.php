@@ -1,7 +1,7 @@
 @extends('layout/master')
 
 @section('h2')
-Ajouter des avatars
+Ajouter un avatar
 @endsection
 
 @section('content')

@@ -30,9 +30,9 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#">Utilisateurs</a>
+                        <a class="dropdown-item" href="#">Avatars</a>
                         <a class="dropdown-item" href="#">Catégories</a>
                         <a class="dropdown-item" href="#">Images</a>
-                        <a class="dropdown-item" href="#">Avatars</a>
                     </div>
                 </li>
             </ul>
