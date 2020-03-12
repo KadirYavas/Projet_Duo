@@ -10,6 +10,9 @@
         @yield('title')
     </title>
 </head>
+
+    @yield('style')
+
 <body>
 <header>
 {{--        Navbar--}}
