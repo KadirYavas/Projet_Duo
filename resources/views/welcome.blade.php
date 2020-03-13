@@ -62,7 +62,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
         <img src="{{ asset('image/laravelLogo.png') }}" width="30" height="30" class="d-inline-block align-top" alt="">
-        Librairie Exo
+        Projet Duo
     </a>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
@@ -74,18 +74,20 @@
                     Administration
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="{{route('adminUser')}}">Utilisateurs</a>
-                    <a class="dropdown-item" href="{{route('adminAvatar')}}">Avatars</a>
-                    <a class="dropdown-item" href="{{route('adminEntreprise')}}">Entreprise</a>
-                    <a class="dropdown-item" href="#">Genres</a>
+                    <a class="dropdown-item" href="{{ route('adminUser') }}">Utilisateurs</a>
+                    <a class="dropdown-item" href="{{ route('adminAvatar') }}">Avatars</a>
+                    <a class="dropdown-item" href="{{ route('adminEntreprise') }}">Entreprise</a>
+                    <a class="dropdown-item" href="{{ route('listeCategory') }}">Catégories</a>
+                    <a class="dropdown-item" href="{{ route('listeImage') }}">Images</a>
                 </div>
             </li>
         </ul>
     </div>
 </nav>
+@section('breadcrumb')
+    <li class="breadcrumb-item active" aria-current="page">Home</li>
+@endsection
 <div class="flex-center position-ref full-height">
-
-
     <div class="content">
         <div class="title mt-5 m-b-md w-100">
             <img  src="{{ asset('image/1200px-Laravel.svg.png') }}" width="200">

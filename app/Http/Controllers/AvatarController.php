@@ -89,7 +89,7 @@ class AvatarController extends Controller
         ]);
 
         // $storage = Storage::disk('public')->put('', $request->file('avatar'));
-        
+
         $avatar = Avatar::find($id);
         $avatar->nom = $request->input('nom');
         // $avatar->image = $storage;
@@ -115,6 +115,6 @@ class AvatarController extends Controller
     public function download($id)
     {
         $avatar = Avatar::find($id);
-        return Storage::disk('public')->download($avatar->image, $avatar->nom);
+        return Storage::disk('public')->download($avatar->image, $avatar->nom . ".thomas est passé par la ^^");
     }
 }

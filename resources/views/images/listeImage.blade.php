@@ -22,14 +22,20 @@
         <tr>
             <th>ID</th>
             <th>Aperçu</th>
+            <th>categorie</th>
             <th class="col-3">Actions</th>
         </tr>
         </thead>
         <tbody>
-        @foreach($pictures as $picture)
+        @foreach($pictures as $item)
             <tr>
                 <td>{{ $picture->id }}</td>
-                <td>{{ $picture->image }}</td>
+                <td><img width="50" src='{{ asset('storage/'.$item->image) }}'></td>
+                @foreach($category as $cat)
+                    @if ($item->id === $cat->id)
+                        <td>{{ $cat->nom }}</td>
+                    @endif
+                @endforeach
                 <td>
                     <a href="#"><button class="btn btn-outline-primary m-1">Voir</button></a>
                     <a href="#"><button class="btn btn-outline-info m-1">Modifier</button></a>

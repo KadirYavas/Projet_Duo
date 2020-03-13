@@ -50,7 +50,7 @@ class UserController extends Controller
         $user->avatars_id = $request->input('choix');
         $user->save();
 
-        return redirect()->back();
+        return redirect()->route('adminUser');
     }
 
     /**
@@ -90,7 +90,7 @@ class UserController extends Controller
         //     'nom' => 'required|min:4',
         //     'image' => 'required'
         // ]);
-        
+
         $user = User::find($id);
         $user->nom = $request->input('nom');
         $user->age = $request->input('age');

@@ -39,6 +39,14 @@ Route::get('/home/images' , 'PictureController@index')->name('listeImage');
 Route::get('/home/images/create' , 'PictureController@create')->name('createImage');
 Route::post('/home/images/create/store' , 'PictureController@store')->name('storeImage');
 
+//CATEGORIES
+Route::get('/home/categories' , 'CategoryController@index')->name('listeCategory');
+Route::get('/home/categories/create' , 'CategoryController@create')->name('createCategory');
+Route::post('/home/categories/create/store' , 'CategoryController@store')->name('storeCategory');
+Route::get('/home/categories/edit/{id}' , 'CategoryController@edit')->name('editCategory');
+Route::post('/home/categories/edit/update/{id}' , 'CategoryController@update')->name('updateCategory');
+Route::get('/home/categories/edit/destroy/{id}' , 'CategoryController@destroy')->name('destroyCategory');
+
 //ENTREPRISE
 Route::get('administrationEntreprise', 'EntrepriseController@index')->name('adminEntreprise');
 Route::get('ajoutEntreprise', 'EntrepriseController@create')->name('ajoutEntreprise');
