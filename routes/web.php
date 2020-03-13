@@ -38,6 +38,10 @@ Route::get('destroyUser/{id}', 'UserController@destroy')->name('destroyUser');
 Route::get('/home/images' , 'PictureController@index')->name('listeImage');
 Route::get('/home/images/create' , 'PictureController@create')->name('createImage');
 Route::post('/home/images/create/store' , 'PictureController@store')->name('storeImage');
+Route::get('editPicture/{id}', 'PictureController@edit')->name('editImage');
+Route::post('updatePicture/{id}', 'PictureController@update')->name('updateImage');
+Route::get('destroyPicture/{id}', 'PictureController@destroy')->name('destroyImage');
+Route::get('downloadPicture/{id}', 'PictureController@download')->name('downloadImage');
 
 //CATEGORIES
 Route::get('/home/categories' , 'CategoryController@index')->name('listeCategory');
@@ -55,3 +59,11 @@ Route::get('editEntreprise/{id}', 'EntrepriseController@edit')->name('editEntrep
 Route::post('updateEntreprise/{id}', 'EntrepriseController@update')->name('updateEntreprise');
 Route::get('destroyEntreprise/{id}', 'EntrepriseController@destroy')->name('destroyEntreprise');
 Route::get('downloadEntreprise/{id}', 'EntrepriseController@download')->name('downloadEntreprise');
+
+//ROLES
+Route::get('administrationRoles', 'RoleController@index')->name('adminRole');
+Route::get('ajoutRoles', 'RoleController@create')->name('ajoutRole');
+Route::post('envoiRoles', 'RoleController@store')->name('envoiRole');
+Route::get('editRoles/{id}', 'RoleController@edit')->name('editRole');
+Route::post('updateRoles/{id}', 'RoleController@update')->name('updateRole');
+Route::get('destroyRoles/{id}', 'RoleController@destroy')->name('destroyRole');

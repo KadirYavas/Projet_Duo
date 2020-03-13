@@ -35,8 +35,9 @@
             <div class="mb-2">
                 <label for="category">Nom de la categorie</label>
                 <select class="form-control @error('category') is-invalid @enderror" name="category" id="category" placeholder="Veuillez saisir le nom de la categorie">
-                @foreach($errors as $item)
-                    <option>{{ $item->nom }}</option>
+                @foreach($categorie as $item)
+                    <option value="">Choose...</option>
+                <option value="{{$item->id}}">{{ $item->nom }}</option>
                     @endforeach
                 </select>
                 @error('category')

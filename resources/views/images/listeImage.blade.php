@@ -29,17 +29,17 @@
         <tbody>
         @foreach($pictures as $item)
             <tr>
-                <td>{{ $picture->id }}</td>
+                <td>{{ $item->id }}</td>
                 <td><img width="50" src='{{ asset('storage/'.$item->image) }}'></td>
-                @foreach($category as $cat)
+                @foreach($categorie as $cat)
                     @if ($item->id === $cat->id)
                         <td>{{ $cat->nom }}</td>
                     @endif
                 @endforeach
                 <td>
-                    <a href="#"><button class="btn btn-outline-primary m-1">Voir</button></a>
-                    <a href="#"><button class="btn btn-outline-info m-1">Modifier</button></a>
-                    <a href="#"><button class="btn btn-outline-danger">Supprimer</button></a>
+                    <a href="{{route('downloadImage', $item->id)}}"><button class="btn btn-outline-primary m-1">Télécharger</button></a>
+                    <a href="{{route('editImage', $item->id)}}"><button class="btn btn-outline-info m-1">Modifier</button></a>
+                    <a href="{{route('destroyImage', $item->id)}}"><button class="btn btn-outline-danger">Supprimer</button></a>
                 </td>
             </tr>
         @endforeach

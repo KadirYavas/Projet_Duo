@@ -24,6 +24,8 @@
             <th>Age</th>
             <th>Adresse Email</th>
             <th>Avatar</th>
+            <th>Entreprise</th>
+            <th>Role</th>
             <th class="col-3">Actions</th>
         </tr>
         </thead>
@@ -38,6 +40,12 @@
                     @if($img->id === $item->id)
                         <td><img src="{{asset('storage/'.$img->image)}}" height="50" alt=""></td>
                     @endif
+                @endforeach
+                @foreach($entreprise as $img)
+                        <td>{{$img->nom}}</td>
+                @endforeach
+                @foreach($role as $roles)
+                        <td>{{$roles->fonction}}</td>
                 @endforeach
                 <td>
                     <a href="{{route('editUser', $item->id)}}"><button class="btn btn-outline-info m-1">MODIFIER</button></a>

@@ -14,7 +14,8 @@ class RoleController extends Controller
      */
     public function index()
     {
-        //
+        $role = Role::all();
+        return view('role/administration', compact('role'));
     }
 
     /**
@@ -24,7 +25,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        //
+        return view('role/ajoutRole');
     }
 
     /**
@@ -35,7 +36,15 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'role' => 'required|min:2',
+        ]);
+
+        $role = new Role();
+        $role->fonction = $request->input('role');
+        $role->save();
+
+        return redirect()->route('adminRole');
     }
 
     /**
@@ -55,9 +64,10 @@ class RoleController extends Controller
      * @param  \App\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function edit(Role $role)
+    public function edit($id)
     {
-        //
+        $role = Role::find($id);
+        return view('role/editRole', compact('role'));
     }
 
     /**
@@ -67,9 +77,18 @@ class RoleController extends Controller
      * @param  \App\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Role $role)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'role' => 'required|min:2',
+        ]);
+
+        $role = Role::find($id);
+        $role->fonction = $request->input('role');
+
+        $role->save();
+
+        return redirect()->route('adminRole');
     }
 
     /**
@@ -78,8 +97,10 @@ class RoleController extends Controller
      * @param  \App\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Role $role)
+    public function destroy($id)
     {
-        //
+        $role = Role::find($id);
+        $role->delete();
+        return redirect()->route('adminRole');
     }
 }

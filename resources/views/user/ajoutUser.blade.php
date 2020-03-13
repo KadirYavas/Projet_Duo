@@ -86,7 +86,20 @@ Ajouter un user
                             <img class="mx-2 p-1" width="150" height="150" src="{{asset('storage/'.$entrep->logo)}}" alt="">
                             <h3>{{ $entrep->nom }}</h3>
                         </div>
-                        <input class="label_avatar d-none" type="radio" name="choix" id="" value="{{$entrep->id}}">
+                        <input class="label_avatar d-none" type="radio" name="choixEntre" id="" value="{{$entrep->id}}">
+                    </label>
+                </div>
+            @endforeach
+        </div>
+        <h4>Choisissez un role</h4>
+        <div class="d-flex">
+            @foreach ($role as $roles)
+                <div>
+                    <label class="label_avatar">
+                        <div class="text-center">
+                            <h3>{{ $roles->fonction }}</h3>
+                        </div>
+                        <input class="label_avatar d-none" type="radio" name="choixRole" id="" value="{{$roles->id}}">
                     </label>
                 </div>
             @endforeach

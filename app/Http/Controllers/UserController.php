@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Avatar;
 use App\User;
 use App\Entreprise;
+use App\Role;
 
 class UserController extends Controller
 {
@@ -20,7 +21,8 @@ class UserController extends Controller
         $user = User::all();
         $avatar = Avatar::all();
         $entreprise = Entreprise::all();
-        return view('user/administration', compact('user', 'avatar', 'entreprise'));
+        $role = Role::all();
+        return view('user/administration', compact('user', 'avatar', 'entreprise', 'role'));
     }
 
     /**
@@ -32,7 +34,8 @@ class UserController extends Controller
     {
         $avatar = Avatar::all();
         $entreprise = Entreprise::all();
-        return view('user/ajoutUser', compact('avatar', 'entreprise'));
+        $role = Role::all();
+        return view('user/ajoutUser', compact('avatar', 'entreprise', 'role'));
     }
 
     /**
@@ -48,6 +51,8 @@ class UserController extends Controller
         $user->age = $request->input('age');
         $user->email = $request->input('email');
         $user->avatars_id = $request->input('choix');
+        $user->roles_id = $request->input('choixEntre');
+        $user->entreprises_id = $request->input('choixRole');
         $user->save();
 
         return redirect()->route('adminUser');

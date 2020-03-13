@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PictureRequest;
 use App\Picture;
+use App\Category;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
@@ -22,7 +23,8 @@ class PictureController extends Controller
     public function index()
     {
         $pictures = Picture::all();
-        return view('images.listeImage' , compact('pictures'));
+        $categorie = Category::all();
+        return view('images.listeImage' , compact('pictures', 'categorie'));
     }
 
     /**
@@ -32,7 +34,8 @@ class PictureController extends Controller
      */
     public function create()
     {
-        return view('images.createImage');
+        $categorie = Category::all();
+        return view('images.createImage', compact('categorie'));
     }
 
     /**
@@ -48,10 +51,8 @@ class PictureController extends Controller
         $pictures = new Picture();
 
         $pictures->image = $storage;
-        $pictures->
 
         $pictures->save();
-//        dd($pictures);
         return redirect()->route('listeImage');
     }
 
@@ -72,9 +73,10 @@ class PictureController extends Controller
      * @param  \App\Picture  $picture
      * @return Response
      */
-    public function edit(Picture $picture)
+    public function edit($id)
     {
-        //
+        $picture = Picture::find($id);
+        return view('images/editImage', compact('picture'));
     }
 
     /**
@@ -84,9 +86,21 @@ class PictureController extends Controller
      * @param  \App\Picture  $picture
      * @return Response
      */
-    public function update(Request $request, Picture $picture)
+    public function update(Request $request, $id)
     {
-        //
+        // $request->validate([
+        //     'nom' => 'required|min:4',
+        //     'image' => 'required'
+        // ]);
+
+        // $storage = Storage::disk('public')->put('', $request->file('avatar'));
+
+        $avatar = Avatar::find($id);
+        $avatar->image = $storage;
+
+        $avatar->save();
+
+        return redirect()->route('listeImage');
     }
 
     /**
@@ -95,8 +109,16 @@ class PictureController extends Controller
      * @param  \App\Picture  $picture
      * @return Response
      */
-    public function destroy(Picture $picture)
+    public function destroy($id)
     {
-        //
+        $picture = Picture::find($id);
+        Storage::disk('public')->delete($picture->image);
+        $picture->delete();
+        return redirect()->route('listeImage');
+    }
+    public function download($id)
+    {
+        $picture = Picture::find($id);
+        return Storage::disk('public')->download($picture->image, $picture->nom);
     }
 }
