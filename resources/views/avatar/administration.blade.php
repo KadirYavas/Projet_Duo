@@ -14,9 +14,11 @@
 @endsection
 
 @section('content')
+@if(count($avatar)<=4)
     <a href="{{route('ajoutAvatar')}}">
         <button type="button" class="btn btn-outline-dark btn-lg mb-4">Ajouter un Avatar</button>
     </a>
+    @endif
     <table class="table table-bordered table-hover shadow">
         <thead>
         <tr>

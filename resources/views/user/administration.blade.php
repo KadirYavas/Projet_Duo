@@ -41,11 +41,15 @@
                         <td><img src="{{asset('storage/'.$img->image)}}" height="50" alt=""></td>
                     @endif
                 @endforeach
-                @foreach($entreprise as $img)
+                @foreach($entreprise as $image)
+                @if($image->id === $item->id)
                         <td>{{$img->nom}}</td>
+                        @endif
                 @endforeach
                 @foreach($role as $roles)
+                @if($roles->id === $item->id)
                         <td>{{$roles->fonction}}</td>
+                        @endif
                 @endforeach
                 <td>
                     <a href="{{route('editUser', $item->id)}}"><button class="btn btn-outline-info m-1">MODIFIER</button></a>

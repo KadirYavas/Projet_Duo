@@ -97,7 +97,7 @@ Ajouter un user
                 <div>
                     <label class="label_avatar">
                         <div class="text-center">
-                            <h3>{{ $roles->fonction }}</h3>
+                            <h3 class="p-2">{{ $roles->fonction }}</h3>
                         </div>
                         <input class="label_avatar d-none" type="radio" name="choixRole" id="" value="{{$roles->id}}">
                     </label>
